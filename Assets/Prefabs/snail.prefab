@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1900583755584939153}
   - component: {fileID: 7478743235314167204}
   - component: {fileID: 809932525177928378}
+  - component: {fileID: 6321692428142114600}
   m_Layer: 0
   m_Name: snail
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1900583755584939153
 SpriteRenderer:
@@ -147,3 +148,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.55, y: 0.4}
   m_EdgeRadius: 0
+--- !u!95 &6321692428142114600
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6821700148410081209}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 483a1e602ce0a394eaadac24ce16bc05, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

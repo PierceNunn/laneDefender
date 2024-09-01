@@ -8,9 +8,13 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] private int _enemyHealth;
     [SerializeField] private int _pointValue;
     [SerializeField] private float _timeToPauseOnHit;
+    private Animator enemyAnimator;
     private bool isMoving = true;
 
-    
+    private void Start()
+    {
+        enemyAnimator = gameObject.GetComponent<Animator>();
+    }
     void Update()
     {
         if (isMoving)
@@ -22,6 +26,7 @@ public class EnemyBehavior : MonoBehaviour
     public void TakeDamage()
     {
         _enemyHealth--;
+        enemyAnimator.Play("hurt");
         StopAllCoroutines();
         StartCoroutine(DamagePause());
 

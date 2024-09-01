@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1931294972049880890}
   - component: {fileID: 7354533166867038220}
   - component: {fileID: 7919707413021646409}
+  - component: {fileID: 693808260187410199}
   m_Layer: 0
   m_Name: slime
   m_TagString: Enemy
@@ -33,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8690886239437187501
 SpriteRenderer:
@@ -103,6 +104,7 @@ MonoBehaviour:
   _enemyHealth: 2
   _pointValue: 1
   _timeToPauseOnHit: 0.25
+  _enemyAnimator: {fileID: 693808260187410199}
 --- !u!61 &7354533166867038220
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -175,3 +177,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &693808260187410199
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3013557341849914205}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 74a01d7153113ca46aca65888d03e1e4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
