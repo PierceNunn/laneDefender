@@ -17,19 +17,22 @@ public class BulletBehavior : MonoBehaviour
         gameObject.transform.position = new Vector3(
             gameObject.transform.position.x + (_bulletSpeed * Time.deltaTime), 
             gameObject.transform.position.y);
-        _bulletLifetime -= Time.deltaTime;
 
-        if (_bulletLifetime <= 0f)
-            Destroy(gameObject);
+        StartCoroutine(LifetimeCountdown());
             
+    }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(true)
+        {
+            //add explosionnnn
+            collision.gameObject.GetComponent<EnemyBehavior>().TakeDamage();
+        }
     }
 
     IEnumerator LifetimeCountdown()
     {
-        for(float c = _bulletLifetime; c <= 0f; c -= Time.deltaTime)
-        {
-            yield return null;
-        }
+        yield return new WaitForSeconds(_bulletLifetime);
         Destroy(gameObject);
     }
 }
