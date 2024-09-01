@@ -6,20 +6,33 @@ public class EnemyBehavior : MonoBehaviour
 {
     [SerializeField] private float _enemySpeed;
     [SerializeField] private int _enemyHealth;
+    [SerializeField] private float _timeToPauseOnHit;
+    private bool isMoving = true;
 
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position = new Vector3(
-            gameObject.transform.position.x - (_enemySpeed * Time.deltaTime),
-            gameObject.transform.position.y);
+        if (isMoving)
+            gameObject.transform.position = new Vector3(
+                gameObject.transform.position.x - (_enemySpeed * 
+                Time.deltaTime), gameObject.transform.position.y);
     }
 
     public void TakeDamage()
     {
         _enemyHealth--;
+        StopAllCoroutines();
+        StartCoroutine(DamagePause());
+
         if (_enemyHealth <= 0)
             Destroy(gameObject);
+    }
+
+    IEnumerator DamagePause()
+    {
+        isMoving = false;
+        yield return new WaitForSeconds(_timeToPauseOnHit);
+        isMoving = true;
     }
 
 

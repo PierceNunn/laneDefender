@@ -27,6 +27,7 @@ public class BulletBehavior : MonoBehaviour
         {
             //add explosionnnn
             collision.gameObject.GetComponent<EnemyBehavior>().TakeDamage();
+            Destroy(gameObject);
         }
     }
 

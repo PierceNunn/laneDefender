@@ -18,7 +18,7 @@ public class TankController : MonoBehaviour
     }
 
     
-    void Update()
+    void FixedUpdate()
     {
         rb.AddForce(playerMovement);
     }
