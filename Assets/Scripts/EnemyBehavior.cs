@@ -6,10 +6,11 @@ public class EnemyBehavior : MonoBehaviour
 {
     [SerializeField] private float _enemySpeed;
     [SerializeField] private int _enemyHealth;
+    [SerializeField] private int _pointValue;
     [SerializeField] private float _timeToPauseOnHit;
     private bool isMoving = true;
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (isMoving)

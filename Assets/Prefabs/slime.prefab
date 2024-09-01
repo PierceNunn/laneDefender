@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemySpeed: 1
   _enemyHealth: 2
+  _pointValue: 1
   _timeToPauseOnHit: 0.25
 --- !u!61 &7354533166867038220
 BoxCollider2D:
