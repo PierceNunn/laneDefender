@@ -20,5 +20,7 @@ public class UIHandler : MonoBehaviour
     {
         _livesDisplay.text = "Lives: " + 
             FindObjectOfType<LivesHandler>().Lives;
+        _scoreDisplay.text = "Score: " + 
+            FindObjectOfType<ScoreHandler>().CurrentScore;
     }
 }

@@ -35,8 +35,12 @@ public class EnemyBehavior : MonoBehaviour
         }
         else
         {
+            FindObjectOfType<ScoreHandler>().CurrentScore += _pointValue;
             isMoving = false;
             enemyAnimator.Play("die");
+            //destroy collider so bullets can pass through during death anim
+            Destroy(gameObject.GetComponent<BoxCollider2D>());
+            //delay destroying enemy so animation can play
             Invoke("DestroySelf", 1f);
         }
             
