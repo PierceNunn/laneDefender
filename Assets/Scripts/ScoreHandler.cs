@@ -10,6 +10,11 @@ public class ScoreHandler : MonoBehaviour
     public int CurrentScore { get => _currentScore; set => _currentScore = value; }
     public static int HighScore { get => highScore; set => highScore = value; }
 
+    private void Start()
+    {
+        highScore = PlayerPrefs.GetInt("HighScore", 0);
+
+    }
     public void SetHighScore()
     {
         if (_currentScore > PlayerPrefs.GetInt("HighScore", 0))
