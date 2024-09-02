@@ -5,10 +5,10 @@ using UnityEngine;
 public class ScoreHandler : MonoBehaviour
 {
     [SerializeField] private int _currentScore;
-    private int highScore;
+    private static int highScore;
 
     public int CurrentScore { get => _currentScore; set => _currentScore = value; }
-    public int HighScore { get => highScore; set => highScore = value; }
+    public static int HighScore { get => highScore; set => highScore = value; }
 
     public void SetHighScore()
     {
