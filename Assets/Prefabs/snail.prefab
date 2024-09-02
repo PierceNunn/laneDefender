@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemySpeed: 0.75
-  _enemyHealth: 4
+  _enemyHealth: 3
   _pointValue: 2
   _timeToPauseOnHit: 0.5
 --- !u!61 &809932525177928378

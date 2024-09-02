@@ -25,13 +25,28 @@ public class EnemyBehavior : MonoBehaviour
 
     public void TakeDamage()
     {
-        _enemyHealth--;
-        enemyAnimator.Play("hurt");
-        StopAllCoroutines();
-        StartCoroutine(DamagePause());
 
-        if (_enemyHealth <= 0)
-            Destroy(gameObject);
+        _enemyHealth--;
+        if(_enemyHealth > 0)
+        {
+            enemyAnimator.Play("hurt");
+            StopAllCoroutines();
+            StartCoroutine(DamagePause());
+        }
+        else
+        {
+            isMoving = false;
+            enemyAnimator.Play("die");
+            Invoke("DestroySelf", 1f);
+        }
+            
+    }
+
+    //DestroySelf's just needed due to Invoke not taking in variables for its
+    //function
+    void DestroySelf()
+    {
+        Destroy(gameObject);
     }
 
     IEnumerator DamagePause()

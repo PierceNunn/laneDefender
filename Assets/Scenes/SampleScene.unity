@@ -1117,8 +1117,8 @@ MonoBehaviour:
   - {fileID: 1239631221}
   _enemyTypes:
   - {fileID: 1528543104025752218, guid: 77c7aeceaac0e074db7fe624f28fe470, type: 3}
-  - {fileID: 6821700148410081209, guid: 0fc526f3c07308c4b8e5a9df98fb93a4, type: 3}
   - {fileID: 3013557341849914205, guid: b179b1a770cc2ec4bb6b8c1589b6f519, type: 3}
+  - {fileID: 6821700148410081209, guid: 0fc526f3c07308c4b8e5a9df98fb93a4, type: 3}
   _spawnTime: 2
 --- !u!4 &1425135400
 Transform:
