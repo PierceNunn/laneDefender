@@ -24,5 +24,6 @@ public class LivesHandler : MonoBehaviour
     void LoseGame()
     {
         FindObjectOfType<EnemySpawner>().StopAllCoroutines();
+        FindObjectOfType<ScoreHandler>().SetHighScore();
     }
 }

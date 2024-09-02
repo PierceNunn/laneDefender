@@ -15,5 +15,7 @@ public class UIHandler : MonoBehaviour
             FindObjectOfType<LivesHandler>().Lives;
         _scoreDisplay.text = "Score: " + 
             FindObjectOfType<ScoreHandler>().CurrentScore;
+        _highScoreDisplay.text = "High Score: " +
+            ScoreHandler.HighScore;
     }
 }
