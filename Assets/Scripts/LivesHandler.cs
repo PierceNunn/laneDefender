@@ -11,13 +11,18 @@ public class LivesHandler : MonoBehaviour
 
     void Start()
     {
-        Lives = _maxLives;
+        lives = _maxLives;
     }
 
     public void TakeDamage()
     {
-        Lives--;
-        if (Lives <= 0)
-            ;
+        lives--;
+        if (lives <= 0)
+            LoseGame();
+    }
+
+    void LoseGame()
+    {
+        FindObjectOfType<EnemySpawner>().StopAllCoroutines();
     }
 }

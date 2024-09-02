@@ -22,7 +22,15 @@ public class EnemyBehavior : MonoBehaviour
                 gameObject.transform.position.x - (_enemySpeed * 
                 Time.deltaTime), gameObject.transform.position.y);
     }
-
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            FindObjectOfType<LivesHandler>().TakeDamage();
+            Destroy(gameObject);
+        }
+            
+    }
     public void TakeDamage()
     {
 

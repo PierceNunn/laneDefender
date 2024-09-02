@@ -26,7 +26,7 @@ public class TankController : MonoBehaviour
     void OnMove(InputValue iValue)
     {
         Vector2 inputMovement = iValue.Get<Vector2>();
-        playerMovement = new Vector3(0, inputMovement.y * _playerSpeed);
+        playerMovement = new Vector2(0, inputMovement.y * _playerSpeed);
     }
 
     void OnFire()

@@ -9,13 +9,6 @@ public class UIHandler : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _scoreDisplay;
     [SerializeField] private TextMeshProUGUI _highScoreDisplay;
 
-    
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         _livesDisplay.text = "Lives: " + 

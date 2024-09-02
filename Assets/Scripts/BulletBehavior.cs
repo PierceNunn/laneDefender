@@ -23,7 +23,7 @@ public class BulletBehavior : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(true)
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             //add explosionnnn
             collision.gameObject.GetComponent<EnemyBehavior>().TakeDamage();
