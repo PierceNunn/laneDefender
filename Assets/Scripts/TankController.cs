@@ -8,6 +8,8 @@ public class TankController : MonoBehaviour
     [SerializeField] private float _playerSpeed;
     [SerializeField] private float _shootCooldown;
     [SerializeField] private GameObject _bullet;
+    [SerializeField] private GameObject _explosion;
+    [SerializeField] private GameObject _barrel;
 
     private bool canShoot = true;
     private Vector2 playerMovement;
@@ -33,7 +35,11 @@ public class TankController : MonoBehaviour
     {
         if(canShoot)
         {
-            Instantiate(_bullet, this.transform.position, Quaternion.identity);
+            gameObject.GetComponent<AudioSource>().Play();
+            Instantiate(_bullet, 
+                _barrel.transform.position, Quaternion.identity);
+            Instantiate(_explosion, 
+                _barrel.transform.position, Quaternion.identity);
             canShoot = false;
             StartCoroutine(ShootCooldown());
         }

@@ -6,6 +6,7 @@ public class BulletBehavior : MonoBehaviour
 {
     [SerializeField] private float _bulletSpeed;
     [SerializeField] private float _bulletLifetime;
+    [SerializeField] private GameObject _explosion;
     void Start()
     {
         
@@ -25,7 +26,8 @@ public class BulletBehavior : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            //add explosionnnn
+            Instantiate(_explosion, 
+                this.transform.position, Quaternion.identity);
             collision.gameObject.GetComponent<EnemyBehavior>().TakeDamage();
             Destroy(gameObject);
         }
