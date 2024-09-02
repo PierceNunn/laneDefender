@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UIHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private TextMeshProUGUI _livesDisplay;
+    [SerializeField] private TextMeshProUGUI _scoreDisplay;
+    [SerializeField] private TextMeshProUGUI _highScoreDisplay;
+
+    
     void Start()
     {
         
@@ -13,6 +18,7 @@ public class UIHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        _livesDisplay.text = "Lives: " + 
+            FindObjectOfType<LivesHandler>().Lives;
     }
 }
