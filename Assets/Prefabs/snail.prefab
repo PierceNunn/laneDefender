@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemySpeed: 0.75
-  _enemyHealth: 3
+  _enemyHealth: 5
   _pointValue: 2
   _timeToPauseOnHit: 0.5
   _deathSound: {fileID: 892974139587775628}

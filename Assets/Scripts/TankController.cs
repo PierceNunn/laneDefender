@@ -31,6 +31,11 @@ public class TankController : MonoBehaviour
         playerMovement = new Vector2(0, inputMovement.y * _playerSpeed);
     }
 
+    void OnRestart()
+    {
+        FindObjectOfType<SceneLoader>().LoadScene("SampleScene");
+    }
+
     void OnFire()
     {
         if(canShoot)
