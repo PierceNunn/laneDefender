@@ -21,6 +21,7 @@ public class LivesHandler : MonoBehaviour
         _loseLifeSFX.Play();
         lives--;
         if (lives <= 0)
+            lives = 0;
             LoseGame();
     }
 
