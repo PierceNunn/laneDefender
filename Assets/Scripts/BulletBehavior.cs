@@ -32,7 +32,7 @@ public class BulletBehavior : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    //destroys bullet after given time so it doesn't fly off forever
     IEnumerator LifetimeCountdown()
     {
         yield return new WaitForSeconds(_bulletLifetime);
