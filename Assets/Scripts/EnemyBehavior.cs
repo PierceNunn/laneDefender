@@ -8,6 +8,7 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] private int _enemyHealth;
     [SerializeField] private int _pointValue;
     [SerializeField] private float _timeToPauseOnHit;
+    [SerializeField] private AudioSource _deathSound;
     private Animator enemyAnimator;
     private bool isMoving = true;
 
@@ -37,12 +38,14 @@ public class EnemyBehavior : MonoBehaviour
         _enemyHealth--;
         if(_enemyHealth > 0)
         {
+            gameObject.GetComponent<AudioSource>().Play();
             enemyAnimator.Play("hurt");
             StopAllCoroutines();
             StartCoroutine(DamagePause());
         }
         else
         {
+            _deathSound.Play();
             FindObjectOfType<ScoreHandler>().CurrentScore += _pointValue;
             isMoving = false;
             enemyAnimator.Play("die");
